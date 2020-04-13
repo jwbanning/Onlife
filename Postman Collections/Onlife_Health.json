@@ -76,7 +76,7 @@
                   "    pm.expect(parseInt(jsonData.args.healthscore)).to.be.gt(50) ",
                   "});",
                   "",
-                  "console.log('The End is near')"
+                  "console.log('The End was going to a long time coming')"
                 ],
                 "type": "text/javascript"
               }
