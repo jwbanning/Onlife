@@ -74,7 +74,9 @@
                   "    var jsonData = pm.response.json();",
                   "    //cast to int",
                   "    pm.expect(parseInt(jsonData.args.healthscore)).to.be.gt(50) ",
-                  "});"
+                  "});",
+                  "",
+                  "console.log('The End')"
                 ],
                 "type": "text/javascript"
               }
