@@ -1,0 +1,138 @@
+{
+  "info": {
+    "_postman_id": "948be249-dbde-4519-91b1-548b867c30b2",
+    "name": "Onlife Health",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Folder 1",
+      "item": [
+        {
+          "name": "User status",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "fc3c7ee4-52c3-456a-b4b2-ee5e33acc602",
+                "exec": [
+                  "",
+                  "pm.test(\"status is present\", function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.args.status).to.eql(\"active\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "361059eb-df2c-44d8-a50f-49522213c0e3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/get?user={{userId}}&status={{status}}",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "get"
+              ],
+              "query": [
+                {
+                  "key": "user",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "status",
+                  "value": "{{status}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "1cdfd94c-e0d4-4f58-b399-c5df190939fb"
+    },
+    {
+      "name": "Folder 2",
+      "item": [
+        {
+          "name": "User healthscore",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "50ae1a8c-7ba9-4358-9fc1-feee4dec4b51",
+                "exec": [
+                  "",
+                  "pm.test(\"health score is over 100t\", function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    //cast to int",
+                  "    pm.expect(parseInt(jsonData.args.healthscore)).to.be.gt(50) ",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "e3ccb0c6-c211-41e5-9a75-a94a004fb787",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/get?user={{userId}}&healthscore={{healthscore}}",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "get"
+              ],
+              "query": [
+                {
+                  "key": "user",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "healthscore",
+                  "value": "{{healthscore}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "b078e340-d592-4b6e-855b-33296d050ecc"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "321ba84d-bee0-4820-acb2-91e1852c66e9",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "4ef80ba7-91f5-4c7b-8005-ff4228a7202a",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
