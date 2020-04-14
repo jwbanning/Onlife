@@ -56,7 +56,31 @@
           "response": []
         }
       ],
-      "_postman_id": "1cdfd94c-e0d4-4f58-b399-c5df190939fb"
+      "_postman_id": "1cdfd94c-e0d4-4f58-b399-c5df190939fb",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "737676c7-9d0a-4481-9d20-76fb181c52b2",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "be9de508-dd77-4005-b73d-dd6834aa52d1",
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Response time is less than 200ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);",
+              "});"
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "Folder 2",
