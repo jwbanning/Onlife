@@ -16,11 +16,15 @@
               "script": {
                 "id": "fc3c7ee4-52c3-456a-b4b2-ee5e33acc602",
                 "exec": [
+                  "(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=\"function\"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error(\"Cannot find module '\"+i+\"'\");throw a.code=\"MODULE_NOT_FOUND\",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u=\"function\"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){",
                   "",
                   "pm.test(\"status is present\", function () {",
                   "    var jsonData = pm.response.json();",
                   "    pm.expect(jsonData.args.status).to.eql(\"active\");",
-                  "});"
+                  "    console.log('test');",
+                  "});",
+                  "},{}]},{},[1]);",
+                  ""
                 ],
                 "type": "text/javascript"
               }
@@ -74,9 +78,12 @@
             "id": "be9de508-dd77-4005-b73d-dd6834aa52d1",
             "type": "text/javascript",
             "exec": [
+              "(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=\"function\"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error(\"Cannot find module '\"+i+\"'\");throw a.code=\"MODULE_NOT_FOUND\",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u=\"function\"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){",
               "pm.test(\"Response time is less than 200ms\", function () {",
               "    pm.expect(pm.response.responseTime).to.be.below(200);",
-              "});"
+              "});",
+              "},{}]},{},[1]);",
+              ""
             ]
           }
         }
@@ -93,6 +100,7 @@
               "script": {
                 "id": "50ae1a8c-7ba9-4358-9fc1-feee4dec4b51",
                 "exec": [
+                  "(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=\"function\"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error(\"Cannot find module '\"+i+\"'\");throw a.code=\"MODULE_NOT_FOUND\",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u=\"function\"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){",
                   "",
                   "pm.test(\"health score is over 100t\", function () {",
                   "    var jsonData = pm.response.json();",
@@ -100,7 +108,9 @@
                   "    pm.expect(parseInt(jsonData.args.healthscore)).to.be.gt(50) ",
                   "});",
                   "",
-                  "console.log('The End')"
+                  "console.log('The End')",
+                  "},{}]},{},[1]);",
+                  ""
                 ],
                 "type": "text/javascript"
               }
@@ -156,9 +166,12 @@
         "id": "4ef80ba7-91f5-4c7b-8005-ff4228a7202a",
         "type": "text/javascript",
         "exec": [
+          "(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=\"function\"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error(\"Cannot find module '\"+i+\"'\");throw a.code=\"MODULE_NOT_FOUND\",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u=\"function\"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){",
           "pm.test(\"Status code is 200\", function () {",
           "    pm.response.to.have.status(200);",
           "});",
+          "",
+          "},{}]},{},[1]);",
           ""
         ]
       }
