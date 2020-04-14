@@ -76,7 +76,7 @@
                   "    pm.expect(parseInt(jsonData.args.healthscore)).to.be.gt(50) ",
                   "});",
                   "",
-                  "console.log('The End was going')"
+                  "console.log('The End')"
                 ],
                 "type": "text/javascript"
               }
