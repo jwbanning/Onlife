@@ -129,7 +129,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{url}}/get?user={{userId}}&healthscore={{healthscore}}",
+              "raw": "{{url}}/get?user={{userId}}&driving_score={{driving_score}}",
               "host": [
                 "{{url}}"
               ],
@@ -142,8 +142,8 @@
                   "value": "{{userId}}"
                 },
                 {
-                  "key": "healthscore",
-                  "value": "{{healthscore}}"
+                  "key": "driving_score",
+                  "value": "{{driving_score}}"
                 }
               ]
             }
